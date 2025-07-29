@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_385f34e2b17751d0c4adf9a8ee98ba91 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_385f34e2b17751d0c4adf9a8ee98ba91" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_385f34e2b17751d0c4adf9a8ee98ba91 = L.map(
+                "map_385f34e2b17751d0c4adf9a8ee98ba91",
+                {
+                    center: [38.5, 32.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_a152f8354c80057ea7adc0cb785cc124 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_a152f8354c80057ea7adc0cb785cc124.addTo(map_385f34e2b17751d0c4adf9a8ee98ba91);
+        
+    
+            var marker_7a0c4f62803dc8ca6dec3dc52cdcf5be = L.marker(
+                [36.8969, 30.7133],
+                {
+}
+            ).addTo(map_385f34e2b17751d0c4adf9a8ee98ba91);
+        
+    
+            var icon_e509fd09a626f07646d94311306f0b31 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3d7e952496b491bfa5cd3ad2e93029fc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dea39e5eaeeb91ac13d1d3a0cbf84b3b = $(`<div id="html_dea39e5eaeeb91ac13d1d3a0cbf84b3b" style="width: 100.0%; height: 100.0%;">Antalya 🌡️ 30.98°C 💧 70% 🌬️ 4.63 m/s 🔥 Risk: DÜŞÜK</div>`)[0];
+                popup_3d7e952496b491bfa5cd3ad2e93029fc.setContent(html_dea39e5eaeeb91ac13d1d3a0cbf84b3b);
+            
+        
+
+        marker_7a0c4f62803dc8ca6dec3dc52cdcf5be.bindPopup(popup_3d7e952496b491bfa5cd3ad2e93029fc)
+        ;
+
+        
+    
+    
+                marker_7a0c4f62803dc8ca6dec3dc52cdcf5be.setIcon(icon_e509fd09a626f07646d94311306f0b31);
+            
+    
+            var marker_d96bb91b1972c0e94e11c08aa3734a82 = L.marker(
+                [37.2153, 28.3636],
+                {
+}
+            ).addTo(map_385f34e2b17751d0c4adf9a8ee98ba91);
+        
+    
+            var icon_01746545817e7bba61f20b2992337be8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_32087ea3aad1d9bde5573be80d9b0228 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4753dc93bf7338dd0242bd6fc7311971 = $(`<div id="html_4753dc93bf7338dd0242bd6fc7311971" style="width: 100.0%; height: 100.0%;">Muğla 🌡️ 26.83°C 💧 36% 🌬️ 3.07 m/s 🔥 Risk: DÜŞÜK</div>`)[0];
+                popup_32087ea3aad1d9bde5573be80d9b0228.setContent(html_4753dc93bf7338dd0242bd6fc7311971);
+            
+        
+
+        marker_d96bb91b1972c0e94e11c08aa3734a82.bindPopup(popup_32087ea3aad1d9bde5573be80d9b0228)
+        ;
+
+        
+    
+    
+                marker_d96bb91b1972c0e94e11c08aa3734a82.setIcon(icon_01746545817e7bba61f20b2992337be8);
+            
+    
+            var marker_52c2b205707138c64acb45075a3a106f = L.marker(
+                [37.0, 35.3213],
+                {
+}
+            ).addTo(map_385f34e2b17751d0c4adf9a8ee98ba91);
+        
+    
+            var icon_4b6d324dab01c8b47713fe3e90d70272 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1830408d31655cb5e9d1f6eb967a6457 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c2aec746c6fae5a0615bdcfb42d37039 = $(`<div id="html_c2aec746c6fae5a0615bdcfb42d37039" style="width: 100.0%; height: 100.0%;">Adana 🌡️ 31.73°C 💧 62% 🌬️ 3.6 m/s 🔥 Risk: DÜŞÜK</div>`)[0];
+                popup_1830408d31655cb5e9d1f6eb967a6457.setContent(html_c2aec746c6fae5a0615bdcfb42d37039);
+            
+        
+
+        marker_52c2b205707138c64acb45075a3a106f.bindPopup(popup_1830408d31655cb5e9d1f6eb967a6457)
+        ;
+
+        
+    
+    
+                marker_52c2b205707138c64acb45075a3a106f.setIcon(icon_4b6d324dab01c8b47713fe3e90d70272);
+            
+    
+            var marker_343feb34aaa5e3556bf06dd54d901420 = L.marker(
+                [38.4192, 27.1287],
+                {
+}
+            ).addTo(map_385f34e2b17751d0c4adf9a8ee98ba91);
+        
+    
+            var icon_6350303b3ba8c60451d76237e5f3bd40 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fb8f2780717000e363389123c4d1c73f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1e19e953b16a9a2f0bec014f51d1af6a = $(`<div id="html_1e19e953b16a9a2f0bec014f51d1af6a" style="width: 100.0%; height: 100.0%;">İzmir 🌡️ 32.78°C 💧 32% 🌬️ 3.09 m/s 🔥 Risk: ORTA</div>`)[0];
+                popup_fb8f2780717000e363389123c4d1c73f.setContent(html_1e19e953b16a9a2f0bec014f51d1af6a);
+            
+        
+
+        marker_343feb34aaa5e3556bf06dd54d901420.bindPopup(popup_fb8f2780717000e363389123c4d1c73f)
+        ;
+
+        
+    
+    
+                marker_343feb34aaa5e3556bf06dd54d901420.setIcon(icon_6350303b3ba8c60451d76237e5f3bd40);
+            
+    
+            var marker_252bc8e63338cefa25fae30dd0a8e418 = L.marker(
+                [39.6484, 27.8826],
+                {
+}
+            ).addTo(map_385f34e2b17751d0c4adf9a8ee98ba91);
+        
+    
+            var icon_7350cbade10c0ccbb4595240c84f3ac5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_eb999dc94d5af5272036d5ebb2232ded = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_31dd662c470faac506323fde36067ebe = $(`<div id="html_31dd662c470faac506323fde36067ebe" style="width: 100.0%; height: 100.0%;">Balıkesir 🌡️ 31.7°C 💧 43% 🌬️ 2.06 m/s 🔥 Risk: DÜŞÜK</div>`)[0];
+                popup_eb999dc94d5af5272036d5ebb2232ded.setContent(html_31dd662c470faac506323fde36067ebe);
+            
+        
+
+        marker_252bc8e63338cefa25fae30dd0a8e418.bindPopup(popup_eb999dc94d5af5272036d5ebb2232ded)
+        ;
+
+        
+    
+    
+                marker_252bc8e63338cefa25fae30dd0a8e418.setIcon(icon_7350cbade10c0ccbb4595240c84f3ac5);
+            
+    
+            var marker_266d88361c310e5bf095ef071a6c5882 = L.marker(
+                [41.2061, 32.6204],
+                {
+}
+            ).addTo(map_385f34e2b17751d0c4adf9a8ee98ba91);
+        
+    
+            var icon_fcf5c702af03417543a0e035969a5fb6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a5cef31fc3ffe8e71b6f1a2c97de6faa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b48ced367b5f98cd66ed8da4d90eb223 = $(`<div id="html_b48ced367b5f98cd66ed8da4d90eb223" style="width: 100.0%; height: 100.0%;">Karabük 🌡️ 30.49°C 💧 32% 🌬️ 1.61 m/s 🔥 Risk: DÜŞÜK</div>`)[0];
+                popup_a5cef31fc3ffe8e71b6f1a2c97de6faa.setContent(html_b48ced367b5f98cd66ed8da4d90eb223);
+            
+        
+
+        marker_266d88361c310e5bf095ef071a6c5882.bindPopup(popup_a5cef31fc3ffe8e71b6f1a2c97de6faa)
+        ;
+
+        
+    
+    
+                marker_266d88361c310e5bf095ef071a6c5882.setIcon(icon_fcf5c702af03417543a0e035969a5fb6);
+            
+    
+            var marker_5f23d860c9a3f58860621fe9fe6ea525 = L.marker(
+                [40.1828, 29.0663],
+                {
+}
+            ).addTo(map_385f34e2b17751d0c4adf9a8ee98ba91);
+        
+    
+            var icon_22efb8c3d0bd9fadfb2ae0b9c5b02a91 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9a669b724c1182b154595c91679319c7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c67e6308b3d09681adfb59f2b4169386 = $(`<div id="html_c67e6308b3d09681adfb59f2b4169386" style="width: 100.0%; height: 100.0%;">Bursa 🌡️ 31.02°C 💧 43% 🌬️ 4.09 m/s 🔥 Risk: DÜŞÜK</div>`)[0];
+                popup_9a669b724c1182b154595c91679319c7.setContent(html_c67e6308b3d09681adfb59f2b4169386);
+            
+        
+
+        marker_5f23d860c9a3f58860621fe9fe6ea525.bindPopup(popup_9a669b724c1182b154595c91679319c7)
+        ;
+
+        
+    
+    
+                marker_5f23d860c9a3f58860621fe9fe6ea525.setIcon(icon_22efb8c3d0bd9fadfb2ae0b9c5b02a91);
+            
+    
+            var marker_5b13b7cd70e8a7cd737ae72ed5eb0c35 = L.marker(
+                [39.7667, 30.5256],
+                {
+}
+            ).addTo(map_385f34e2b17751d0c4adf9a8ee98ba91);
+        
+    
+            var icon_8558820d066a24dfd10d0a4c4cb6d4d3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2e1a0889d3b7a0f5b5a27b89fa9ba16b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_50361f11649fc2e5b15ab84473f00c18 = $(`<div id="html_50361f11649fc2e5b15ab84473f00c18" style="width: 100.0%; height: 100.0%;">Eskişehir 🌡️ 32.9°C 💧 27% 🌬️ 2.57 m/s 🔥 Risk: ORTA</div>`)[0];
+                popup_2e1a0889d3b7a0f5b5a27b89fa9ba16b.setContent(html_50361f11649fc2e5b15ab84473f00c18);
+            
+        
+
+        marker_5b13b7cd70e8a7cd737ae72ed5eb0c35.bindPopup(popup_2e1a0889d3b7a0f5b5a27b89fa9ba16b)
+        ;
+
+        
+    
+    
+                marker_5b13b7cd70e8a7cd737ae72ed5eb0c35.setIcon(icon_8558820d066a24dfd10d0a4c4cb6d4d3);
+            
+    
+            var marker_94913f750380540610f7bdf46694d6b4 = L.marker(
+                [37.9667, 34.6833],
+                {
+}
+            ).addTo(map_385f34e2b17751d0c4adf9a8ee98ba91);
+        
+    
+            var icon_9ac58612d1d41fac84ce0dd4a5ad99e7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_96db0ba93694b2a3df58165d071c5d00 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d09997807e65fb18c0cafb2ed75d0939 = $(`<div id="html_d09997807e65fb18c0cafb2ed75d0939" style="width: 100.0%; height: 100.0%;">Niğde 🌡️ 29.04°C 💧 31% 🌬️ 3.52 m/s 🔥 Risk: DÜŞÜK</div>`)[0];
+                popup_96db0ba93694b2a3df58165d071c5d00.setContent(html_d09997807e65fb18c0cafb2ed75d0939);
+            
+        
+
+        marker_94913f750380540610f7bdf46694d6b4.bindPopup(popup_96db0ba93694b2a3df58165d071c5d00)
+        ;
+
+        
+    
+    
+                marker_94913f750380540610f7bdf46694d6b4.setIcon(icon_9ac58612d1d41fac84ce0dd4a5ad99e7);
+            
+    
+            var marker_33db6061144335fc43836615295806d1 = L.marker(
+                [36.8, 34.6333],
+                {
+}
+            ).addTo(map_385f34e2b17751d0c4adf9a8ee98ba91);
+        
+    
+            var icon_73d9e1b887875bc1aaa48186df51bd94 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_94060fe448e8b771e970d6ff138f0d4b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_db2b774bbf214b2f7a68e1d27969b208 = $(`<div id="html_db2b774bbf214b2f7a68e1d27969b208" style="width: 100.0%; height: 100.0%;">Mersin 🌡️ 28.73°C 💧 77% 🌬️ 1.84 m/s 🔥 Risk: DÜŞÜK</div>`)[0];
+                popup_94060fe448e8b771e970d6ff138f0d4b.setContent(html_db2b774bbf214b2f7a68e1d27969b208);
+            
+        
+
+        marker_33db6061144335fc43836615295806d1.bindPopup(popup_94060fe448e8b771e970d6ff138f0d4b)
+        ;
+
+        
+    
+    
+                marker_33db6061144335fc43836615295806d1.setIcon(icon_73d9e1b887875bc1aaa48186df51bd94);
+            
+    
+            var marker_5f59e189fb3f1f7b72b57dcc22e473bf = L.marker(
+                [36.202, 36.16],
+                {
+}
+            ).addTo(map_385f34e2b17751d0c4adf9a8ee98ba91);
+        
+    
+            var icon_e22a50b14e2b6638bedc065aadca17e9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a4f829cbc46ebbeb367dc31ba2afd199 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4ba91d7f80a78d995a77b228bebc27f2 = $(`<div id="html_4ba91d7f80a78d995a77b228bebc27f2" style="width: 100.0%; height: 100.0%;">Hatay 🌡️ 31.87°C 💧 68% 🌬️ 5.82 m/s 🔥 Risk: DÜŞÜK</div>`)[0];
+                popup_a4f829cbc46ebbeb367dc31ba2afd199.setContent(html_4ba91d7f80a78d995a77b228bebc27f2);
+            
+        
+
+        marker_5f59e189fb3f1f7b72b57dcc22e473bf.bindPopup(popup_a4f829cbc46ebbeb367dc31ba2afd199)
+        ;
+
+        
+    
+    
+                marker_5f59e189fb3f1f7b72b57dcc22e473bf.setIcon(icon_e22a50b14e2b6638bedc065aadca17e9);
+            
+    
+            var marker_d155e3d8d5fc2e39aa1093d491c7583d = L.marker(
+                [37.5736, 36.9371],
+                {
+}
+            ).addTo(map_385f34e2b17751d0c4adf9a8ee98ba91);
+        
+    
+            var icon_a0c531aad264a11525696afcd5848198 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d1f9a6ab8e318929a059f8c7117faa08 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7d3be02b253d7063daf5b2af70f7c3aa = $(`<div id="html_7d3be02b253d7063daf5b2af70f7c3aa" style="width: 100.0%; height: 100.0%;">Kahramanmaraş 🌡️ 33.6°C 💧 40% 🌬️ 2.57 m/s 🔥 Risk: DÜŞÜK</div>`)[0];
+                popup_d1f9a6ab8e318929a059f8c7117faa08.setContent(html_7d3be02b253d7063daf5b2af70f7c3aa);
+            
+        
+
+        marker_d155e3d8d5fc2e39aa1093d491c7583d.bindPopup(popup_d1f9a6ab8e318929a059f8c7117faa08)
+        ;
+
+        
+    
+    
+                marker_d155e3d8d5fc2e39aa1093d491c7583d.setIcon(icon_a0c531aad264a11525696afcd5848198);
+            
+    
+            var marker_1ca3d49526f3e8ae445cf351b5bba4ee = L.marker(
+                [37.0742, 36.2472],
+                {
+}
+            ).addTo(map_385f34e2b17751d0c4adf9a8ee98ba91);
+        
+    
+            var icon_1f1edac70d671ed37b4d8842c0ee91ac = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_86ebae5b5f0a111a798a1df76abdaa98 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_52b4351e167241c981919033cc6fa25c = $(`<div id="html_52b4351e167241c981919033cc6fa25c" style="width: 100.0%; height: 100.0%;">Osmaniye 🌡️ 32.47°C 💧 54% 🌬️ 3.22 m/s 🔥 Risk: DÜŞÜK</div>`)[0];
+                popup_86ebae5b5f0a111a798a1df76abdaa98.setContent(html_52b4351e167241c981919033cc6fa25c);
+            
+        
+
+        marker_1ca3d49526f3e8ae445cf351b5bba4ee.bindPopup(popup_86ebae5b5f0a111a798a1df76abdaa98)
+        ;
+
+        
+    
+    
+                marker_1ca3d49526f3e8ae445cf351b5bba4ee.setIcon(icon_1f1edac70d671ed37b4d8842c0ee91ac);
+            
+    
+            var marker_3dc025b7522432e694d9befa75c9f936 = L.marker(
+                [37.845, 27.8396],
+                {
+}
+            ).addTo(map_385f34e2b17751d0c4adf9a8ee98ba91);
+        
+    
+            var icon_e64a3e8d2b5c3e0a47c320fea5ecd1e2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_283a08da4e36943f6b96f6ffd6b00f32 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c5d131b3011ffbd285bfc0745f5c5bc8 = $(`<div id="html_c5d131b3011ffbd285bfc0745f5c5bc8" style="width: 100.0%; height: 100.0%;">Aydın 🌡️ 30.74°C 💧 48% 🌬️ 1.54 m/s 🔥 Risk: DÜŞÜK</div>`)[0];
+                popup_283a08da4e36943f6b96f6ffd6b00f32.setContent(html_c5d131b3011ffbd285bfc0745f5c5bc8);
+            
+        
+
+        marker_3dc025b7522432e694d9befa75c9f936.bindPopup(popup_283a08da4e36943f6b96f6ffd6b00f32)
+        ;
+
+        
+    
+    
+                marker_3dc025b7522432e694d9befa75c9f936.setIcon(icon_e64a3e8d2b5c3e0a47c320fea5ecd1e2);
+            
+    
+            var marker_58ae49b64dde7841c37d268a00801222 = L.marker(
+                [37.7765, 29.0864],
+                {
+}
+            ).addTo(map_385f34e2b17751d0c4adf9a8ee98ba91);
+        
+    
+            var icon_238e9bd24ec1d0495b5efb06640784e0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_14e67611f72faed0f57ad7f078a78598 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7d6cde99b556d9d249291cfde3b5d881 = $(`<div id="html_7d6cde99b556d9d249291cfde3b5d881" style="width: 100.0%; height: 100.0%;">Denizli 🌡️ 31.6°C 💧 22% 🌬️ 1.33 m/s 🔥 Risk: DÜŞÜK</div>`)[0];
+                popup_14e67611f72faed0f57ad7f078a78598.setContent(html_7d6cde99b556d9d249291cfde3b5d881);
+            
+        
+
+        marker_58ae49b64dde7841c37d268a00801222.bindPopup(popup_14e67611f72faed0f57ad7f078a78598)
+        ;
+
+        
+    
+    
+                marker_58ae49b64dde7841c37d268a00801222.setIcon(icon_238e9bd24ec1d0495b5efb06640784e0);
+            
+    
+            var marker_50bb3c221669d0135d6e6b3ced265023 = L.marker(
+                [38.6191, 27.4289],
+                {
+}
+            ).addTo(map_385f34e2b17751d0c4adf9a8ee98ba91);
+        
+    
+            var icon_637defead57e342810885ad49dc08eb1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f37db921c7d314c549f537155e6a93e6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ddeb67a843e051e3fd3ecc4b9fc9db32 = $(`<div id="html_ddeb67a843e051e3fd3ecc4b9fc9db32" style="width: 100.0%; height: 100.0%;">Manisa 🌡️ 30.64°C 💧 42% 🌬️ 1.87 m/s 🔥 Risk: DÜŞÜK</div>`)[0];
+                popup_f37db921c7d314c549f537155e6a93e6.setContent(html_ddeb67a843e051e3fd3ecc4b9fc9db32);
+            
+        
+
+        marker_50bb3c221669d0135d6e6b3ced265023.bindPopup(popup_f37db921c7d314c549f537155e6a93e6)
+        ;
+
+        
+    
+    
+                marker_50bb3c221669d0135d6e6b3ced265023.setIcon(icon_637defead57e342810885ad49dc08eb1);
+            
+    
+            var marker_96e80065160631b3abc7d6fa6ebe1c12 = L.marker(
+                [37.1591, 38.7969],
+                {
+}
+            ).addTo(map_385f34e2b17751d0c4adf9a8ee98ba91);
+        
+    
+            var icon_20bd15baa5d3d324372dd6a2e6596adb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a3c8378ac8a2e7b38a811eb4414cfb40 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8c6ee501f86f3836476f070fa461371b = $(`<div id="html_8c6ee501f86f3836476f070fa461371b" style="width: 100.0%; height: 100.0%;">Şanlıurfa 🌡️ 39.72°C 💧 12% 🌬️ 2.83 m/s 🔥 Risk: ORTA</div>`)[0];
+                popup_a3c8378ac8a2e7b38a811eb4414cfb40.setContent(html_8c6ee501f86f3836476f070fa461371b);
+            
+        
+
+        marker_96e80065160631b3abc7d6fa6ebe1c12.bindPopup(popup_a3c8378ac8a2e7b38a811eb4414cfb40)
+        ;
+
+        
+    
+    
+                marker_96e80065160631b3abc7d6fa6ebe1c12.setIcon(icon_20bd15baa5d3d324372dd6a2e6596adb);
+            
+</script>
+</html>
