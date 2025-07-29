@@ -2,8 +2,8 @@ name: Gunluk Harita Guncelleme
 
 on:
   schedule:
-    - cron: '0 6 * * *'  # Her sabah 09:00 Türkiye saati (UTC+3)
-  workflow_dispatch:
+    - cron: '0 6 * * *'  # Her sabah 09:00 (UTC+3)
+  workflow_dispatch:     # Manuel çalıştırma desteği
 
 jobs:
   build:
@@ -14,25 +14,24 @@ jobs:
       TOKEN: ${{ secrets.GH_PAT }}
 
     steps:
-    - name: Repo'yu klonla
-      uses: actions/checkout@v3
+      - name: Repo'yu klonla
+        uses: actions/checkout@v3
 
-    - name: Python kurulumu
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.9'
+      - name: Python kurulumu
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.10
 
-    - name: Gerekli paketleri yükle
-      run: pip install requests folium
+      - name: Gerekli paketleri yükle
+        run: pip install requests
 
-    - name: Harita dosyasını üret
-      run: python harita_uret.py
+      - name: Harita dosyasını üret
+        run: python harita_uret.py
 
-    - name: Güncellenmiş dosyayı GitHub'a gönder
-      run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git remote set-url origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/sivilsavunma/yangin-harita.git
-        git add turkiye_yangin_risk_harita.html
-        git commit -m "📍 Otomatik güncelleme: $(date)"
-        git push
+      - name: Güncellenmiş dosyayı GitHub'a gönder
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "🔄 Otomatik güncelleme: $(date -u '+%Y-%m-%d %H:%M:%S') UTC"
+          git push https://x-access-token:${TOKEN}@github.com/sivilsavunma/yangin-harita.git
