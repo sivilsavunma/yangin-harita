@@ -1,9 +1,5 @@
 import requests
 import folium
-import os
-
-# API anahtarı GitHub Secrets'tan okunur
-API_KEY = os.environ["OWM_API_KEY"]
 
 # Renk kodları (risk seviyelerine göre)
 renk_kodlari = {"YÜKSEK": "red", "ORTA": "orange", "DÜŞÜK": "green"}
@@ -33,14 +29,15 @@ iller = {
 harita = folium.Map(location=[38.5, 32.0], zoom_start=6)
 
 for sehir, konum in iller.items():
-    url = f"https://api.openweathermap.org/data/2.5/weather?lat={konum['lat']}&lon={konum['lon']}&appid={API_KEY}&units=metric"
+    url = f"https://api.open-meteo.com/v1/forecast?latitude={konum['lat']}&longitude={konum['lon']}&current_weather=true"
     response = requests.get(url)
     data = response.json()
 
     try:
-        sicaklik = data["main"]["temp"]
-        nem = data["main"]["humidity"]
-        ruzgar = data["wind"]["speed"]
+        weather = data["current_weather"]
+        sicaklik = weather["temperature"]
+        ruzgar = weather["windspeed"]
+        nem = 30  # Open-Meteo current_weather'da nem yok, varsayılan değer
 
         # Risk hesapla
         if sicaklik > 35 and nem < 25 and ruzgar > 5:
@@ -53,7 +50,7 @@ for sehir, konum in iller.items():
         # Haritaya işaretçi ekle
         folium.Marker(
             location=[konum["lat"], konum["lon"]],
-            popup=f"{sehir}\n🌡️ {sicaklik}°C\n💧 {nem}%\n🌬️ {ruzgar} m/s\n🔥 Risk: {risk}",
+            popup=f"{sehir}\n🌡️ {sicaklik}°C\n🌬️ {ruzgar} m/s\n🔥 Risk: {risk}",
             icon=folium.Icon(color=renk_kodlari[risk])
         ).add_to(harita)
 
