@@ -2,21 +2,34 @@ name: Gunluk Harita Guncelleme
 
 on:
   schedule:
-    - cron: '0 6 * * *'  # Her sabah 09:00 Türkiye saati (UTC+3)
-  workflow_dispatch:      # Manuel başlatma desteği
+    - cron: '0 6 * * *'
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     env:
-      OWM_API_KEY: ${{ secrets.OWM_API_KEY }}   # Hava durumu API anahtarın
-      TOKEN: ${{ secrets.GH_PAT }}              # GitHub Personal Access Token
+      OWM_API_KEY: ${{ secrets.OWM_API_KEY }}
+      TOKEN: ${{ secrets.GH_PAT }}
 
     steps:
-    - name: Repo'yu klonla
-      uses: actions/checkout@v2
+      - name: Repo'yu klonla
+        uses: actions/checkout@v2
 
-    - name: Python kurulumu
-      uses: actions/setup-python@v2
-      with:
+      - name: Python kurulumu
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+
+      - name: Gerekli paketleri yükle
+        run: pip install requests folium
+
+      - name: Harita dosyasını üret
+        run: python harita_uret.py
+
+      - name: Güncellenmiş dosyayı GitHub'a gönder
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git
