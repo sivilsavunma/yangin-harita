@@ -2,7 +2,7 @@ name: Gunluk Harita Guncelleme
 
 on:
   schedule:
-    - cron: '0 6 * * *' # Türkiye saati ile 09:00
+    - cron: '0 6 * * *'  # Türkiye saati ile 09:00
   workflow_dispatch:
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
       - name: Python kur
         uses: actions/setup-python@v4
         with:
-          python-version: 3.10
+          python-version: '3.10'
 
       - name: Gerekli paketleri yükle
         run: |
@@ -28,8 +28,9 @@ jobs:
           pip install requests folium
 
       - name: Harita dosyasını üret
-        run: python harita.py
+        run: python harita_uret.py
 
       - name: Güncellenmiş dosyayı GitHub'a gönder
         run: |
-          git config --global
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
